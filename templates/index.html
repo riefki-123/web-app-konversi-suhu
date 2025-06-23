@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konverter Suhu</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: auto; padding: 20px; }
+        form { display: flex; flex-direction: column; gap: 10px; }
+        input, select, button { padding: 10px; font-size: 1em; }
+        h2 { color: #2a9d8f; }
+    </style>
+</head>
+<body>
+    <h1>Aplikasi Konverter Suhu</h1>
+    <p>Aplikasi ini bisa melakukan Konversi suhu C ke F atau sebaliknya</p>
+    
+    <form method="post">
+        <input type="text" name="suhu" placeholder="Masukkan angka suhu" required>
+        <select name="unit">
+            <option value="celsius">Celsius ke Fahrenheit</option>
+            <option value="fahrenheit">Fahrenheit ke Celsius</option>
+        </select>
+        <button type="submit">Konversi</button>
+    </form>
+
+    {% if hasil %}
+    <h2>Hasil: {{ hasil }}</h2>
+    {% endif %}
+
+    <hr>
+    <p>Contoh Kriteria <a href="/tabel">Klik di sini untuk melihat Tabel Konversi</a>.</p>
+</body>
+</html>
