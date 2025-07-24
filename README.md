@@ -40,8 +40,7 @@ Pastikan Anda telah menginstal Python 3 dan pip di sistem Anda.
 
 1.  **Klon repositori ini:**
     ```bash
-    git clone [https://github.com/riefki-123/web-app-konversi-suhu](https://github.com/riefki-123/web-app-konversi-suhu)
-    cd suhu_konverter
+    git clone https://github.com/riefki-123/web-app-konversi-suhu
     ```
 
 2.  **Buat dan aktifkan virtual environment (disarankan):**
