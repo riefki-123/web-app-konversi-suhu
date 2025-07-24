@@ -3,17 +3,9 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# =======================================================
-# KRITERIA 4: FUNCTIONAL (FUNGSI)
-# Kita membuat fungsi khusus untuk logika konversi agar kode lebih rapi dan bisa dipakai ulang.
-# =======================================================
 def konversi_suhu(nilai, unit_asal):
     """Fungsi ini menerima nilai suhu dan unit asalnya, lalu mengembalikan hasil konversi."""
     
-    # =======================================================
-    # KRITERIA 2: SELECTION (SELEKSI / KONDISIONAL)
-    # Menggunakan if/elif untuk menentukan rumus mana yang harus dijalankan.
-    # =======================================================
     if unit_asal == 'celsius':
         # Rumus Celsius ke Fahrenheit
         hasil_konversi = (nilai * 9/5) + 32
@@ -30,10 +22,6 @@ def konversi_suhu(nilai, unit_asal):
 def halaman_utama():
     hasil_akhir = None
     
-    # =======================================================
-    # KRITERIA 1: SEQUENCE (URUTAN)
-    # Urutan eksekusi jika pengguna mengirimkan form (method POST).
-    # =======================================================
     if request.method == 'POST':
         # 1. Ambil data dari form
         try:
@@ -50,10 +38,6 @@ def halaman_utama():
     return render_template('index.html', hasil=hasil_akhir)
 
 
-# =======================================================
-# KRITERIA 3: ITERATION (PERULANGAN)
-# Kita membuat halaman baru khusus untuk menunjukkan contoh perulangan (loop).
-# =======================================================
 @app.route('/tabel')
 def halaman_tabel():
     data_tabel = []
